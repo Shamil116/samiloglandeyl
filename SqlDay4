@@ -1,0 +1,11 @@
+select date_format(date_added, '%Y-%M-%D') as date1,
+	date_format(date_added, '%y-%m-%d') as date2,
+	date_format(date_added, '%w') as date3,
+	date_format(date_added, '%W') as date4,
+    date_format(date_added, '%b') as date5,
+    date_format(date_added, '%H %i %s') as date6,
+	date_add(date_added, interval 10 day) as date_plus_10days,
+	date_sub(date_added, interval 1 year) as date_minus_1year,
+    datediff(CURRENT_DATE, date_added) as diff_days,
+    timestampdiff(month, date_added, CURRENT_DATE) as diff_months
+from netflix;
