@@ -1,3 +1,4 @@
+-- salam
 use code_train;
 describe superstore;
 select * from superstore;
